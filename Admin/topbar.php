@@ -10,7 +10,7 @@
 <div class="wrap">
 <div class="header">
 		<div class="logo">
-		<img src="Images/eblood logo.png" alt="" style=" height: 100px; width: 200px;">
+		<img src="../Images/eblood logo.png" alt="" style=" height: 100px; width: 200px;">
 
 		</div>
 	</div>
