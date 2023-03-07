@@ -83,37 +83,8 @@
 
 <?php }?>
 
-<tr><td class="lefttd"><a href="addgallery.php">Add Gallery</a></td></tr>
-
-<?php if($_SESSION["usertype"]=="Admin")
-{?>
-
-<tr><td class="lefttd"><a href="deletegallery.php">Delete Gallery</a></td></tr>
-
-<?php }?>
-
-<tr><td class="lefttd"><a href="addnews.php">Add News</a></td></tr>
-<?php if($_SESSION["usertype"]=="Admin")
-{?>
-
-<tr><td class="lefttd"><a href="deletenews.php">Delete News</a></td></tr>
-
-<?php }?>
-
-<tr><td class="lefttd"><a href="addadvertise.php">Add Advertisement</a></td></tr>
-
-<?php if($_SESSION["usertype"]=="Admin")
-{?>
-
-<tr><td class="lefttd"><a href="deleteadver.php">Delete Advertisement</a></td></tr>
-
-<?php }?>
-
 <tr><td class="lefttd"><a href="viewcity.php">View City</a></td></tr>
 <tr><td class="lefttd"><a href="viewstate.php">View State</a></td></tr>
-<tr><td class="lefttd"><a href="viewadver.php">View Advertusement</a></td></tr>
-<tr><td class="lefttd"><a href="viewnews.php">View News</a></td></tr>
-
 <tr><td class="lefttd"><a href="viewbloodgroup.php">View Blood Group</a></td></tr>
 <tr><td class="lefttd"><a href="viewcamp.php">View camps</a></td></tr>
 

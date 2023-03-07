@@ -1,3 +1,5 @@
+<?php if(!isset($_SESSION)) {session_start();}  ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -36,6 +38,16 @@
 </head>
 
 <body>
+
+<?php
+
+if($_SESSION['donorstatus']=="")
+{
+	header("location:../login.php");
+}
+?>
+<?php include('function.php'); ?>
+
  <div class="h_bg">
 <div class="wrap">
 <div class="header">
@@ -47,7 +59,7 @@
 </div>
 <div class="nav_bg">
 <div class="wrap">
-		<ul class="nav">
+	<ul class="nav">
 			<li class="active"><a href="chngpwd.php">Change Password</a></li>	
 			<li><a href="updateprofile.php">Update Profile</a></li>            
 			<li><a href="blooddonated.php">Blood Donated</a></li>
@@ -58,27 +70,47 @@
            
             </ul>
 	</div>
-<div style="height:300px; width:700px; margin:auto; margin-top:50px; margin-bottom:50px; background-color:#f8f1e4; border:2px solid red; box-shadow:4px 1px 20px black;">
-    <img src="Images/donorpannel.png"/>
-        
-			
-			
-	</div>
-	
+<div style="height:300px; width:1000px; margin:auto; margin-top:50px; margin-bottom:50px; background-color:#f8f1e4; border:2px solid red; box-shadow:4px 1px 20px black;">
+     <form method="post" enctype="multipart/form-data">
+ <table cellpadding="20" cellspacing="20" width="1000px" height="200px"  style="margin:auto" >
 
-      <div class="clear"></div>
+
+   <tr><td>&nbsp;</td><td>&nbsp;</td></tr>   
+   <br>
+   <h1 align="center" style="color:red"><font size="+3">Points</font></h1>
+                   
+
+<center >
+<font size="+5">
+
+<?php
+
+	
+$cn=mysqli_connect("localhost","root","","bloodbank");
+$s="select * from donarregistration where email='" . $_SESSION["email"] . "'";
+	$result=mysqli_query($cn,$s);
+	$r=mysqli_num_rows($result);
+    $data=mysqli_fetch_array($result);
+	//echo $r;
+	
+   echo @$data[9];
+    
+			mysqli_close($cn);
+			?>
+
+</font>
+</center>
+
+</table>
+</form>
+        </div>
+          
+        <div class="clear"></div>
 <div class="ftr-bg">
 <div class="wrap">
 <div class="footer">
 	<div class="f_nav">
-		<ul>
-			<li class="active"><a href="index.php">Home</a></li>			
-			<li><a href="donor.php">Donor</a></li>
-            <li><a href="login.php">log In</a></li>
-            <li><a href="aboutus.php">About</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-			
-            </ul>
+		
 	</div>
 		<div class="copy">
 			<p class="title">© All Rights Reserved</p>
@@ -87,5 +119,12 @@
 </div>
 </div>
 </div>
+
+
+
+
+			
+			
+	
 </body>
 </html>

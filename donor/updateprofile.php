@@ -56,6 +56,7 @@ if($_SESSION['donorstatus']=="")
 	$r=mysqli_num_rows($q);
 	
 	$data=mysqli_fetch_array($q);
+    $id=$data[0];
 	$name=$data[1];
 	$gender=$data[2];
 	$age=$data[3];
@@ -87,6 +88,7 @@ if($_SESSION['donorstatus']=="")
 			<li><a href="blooddonated.php">Blood Donated</a></li>
             <li><a href="viewdonations.php">View Donations</a></li>
             <li><a href="viewrequest.php">View Requestes</a></li>
+            <li><a href="reward.php">Rewards</a></li>
             <li><a href="logout.php">log Out</a></li>
            
             </ul>
@@ -107,6 +109,8 @@ if($_SESSION['donorstatus']=="")
                 <table cellpadding="0" cellspacing="0" width="450px">
    <td style="vertical-align:top; padding-left:70px" width="500px">
    <table cellpadding="0" cellspacing="0" width="450px" align="center" >
+   <tr><td class="lefttd"  style="vertical-align:middle"> Id </td><td><?php echo @$id;  ?></td></tr>
+         <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
     <tr><td class="lefttd"  style="vertical-align:middle"> Name </td><td><input type="text" name="t1" value="<?php echo @$name;  ?>"  required="required" pattern="[a-zA-Z _]{5,15}" title="please enter only character  between 5 to 15 for  name" /></td></tr>
          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr><td class="lefttd">Gender</td><td><input name="r1" type="radio" value="male"  <?php if($gender=="male"){ echo "checked" ;}  ?>>Male<input name="r1" checked="checked" type="radio" value="female" <?php if($gender=="female"){ echo "checked" ;}  ?> />Female</td></tr>

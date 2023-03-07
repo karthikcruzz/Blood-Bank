@@ -65,6 +65,7 @@ if($_SESSION['donorstatus']=="")
 			<li><a href="blooddonated.php">Blood Donated</a></li>
             <li><a href="viewdonations.php">View Donations</a></li>
             <li><a href="viewrequest.php">View Requestes</a></li>
+            <li><a href="reward.php">Rewards</a></li>
             <li><a href="logout.php">log Out</a></li>
            
             </ul>
@@ -77,8 +78,8 @@ if($_SESSION['donorstatus']=="")
 
    <tr><td>&nbsp;</td><td>&nbsp;</td></tr>   
  <tr style="background-color:bisque" align="center" class="bold">            
-             <td class="bold" style="color:red"  >Blood Group</td><td align="center">Name</td><td align="center">Gender</td><td align="center">Contact No</td><td align="center">Mobile No</td><td align="center">Email</td>
-            <td align="center">Till Required Date</td>
+             <td class="bold" style="color:red"  >Blood Group</td><td align="center">Name</td><td align="center">Gender</td><td align="center">Age</td><td align="center">Mobile No</td><td align="center">Email</td>
+          
         </tr>
                    
 
@@ -94,7 +95,7 @@ $s="select * from requestes";
 	//echo $r;
 	while($data=mysqli_fetch_array($result))
 	{
-				echo"<tr><td  style=' padding-left:50px'>$data[0]</td><td  style=' padding-left:10px'>$data[1]</td><td  style=' padding-left:20px'>$data[2]</td><td  style=' padding-left:30px'>$data[3]</td><td  style=' padding-left:50px'>$data[4]</td><td  style=' padding-left:50px'>$data[5]</td><td  style=' padding-left:60px'>$data[6]</td></tr>";
+				echo"<tr><td  style=' padding-left:50px'>$data[6]</td><td  style=' padding-left:10px'>$data[1]</td><td  style=' padding-left:20px'>$data[2]</td><td  style=' padding-left:30px'>$data[3]</td><td  style=' padding-left:50px'>$data[4]</td><td  style=' padding-left:50px'>$data[5]</td></tr>";
 			}
 			mysqli_close($cn);
 			?>

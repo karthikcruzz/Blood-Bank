@@ -65,6 +65,7 @@ if($_SESSION['donorstatus']=="")
 			<li><a href="blooddonated.php">Blood Donated</a></li>
             <li><a href="viewdonations.php">View Donations</a></li>
             <li><a href="viewrequest.php">View Requestes</a></li>
+            <li><a href="reward.php">Rewards</a></li>
             <li><a href="logout.php">log Out</a></li>
            
             </ul>
