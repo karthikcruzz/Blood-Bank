@@ -61,8 +61,7 @@ if($_SESSION['donorstatus']=="")
 <div class="wrap">
 	<ul class="nav">
 			<li class="active"><a href="chngpwd.php">Change Password</a></li>	
-			<li><a href="updateprofile.php">Update Profile</a></li>            
-			<li><a href="blooddonated.php">Blood Donated</a></li>
+			<li><a href="updateprofile.php">Update Profile</a></li>  
             <li><a href="viewdonations.php">View Donations</a></li>
             <li><a href="viewrequest.php">View Requestes</a></li>
             <li><a href="reward.php">Rewards</a></li>
@@ -77,8 +76,7 @@ if($_SESSION['donorstatus']=="")
 
    <tr><td>&nbsp;</td><td>&nbsp;</td></tr>   
    <br>
-   <h1 align="center" style="color:red"><font size="+3">Points</font></h1>
-                   
+   <h1 align="center" style="color:red"><font size="+3">Points</font></h1>             
 
 <center >
 <font size="+5">
@@ -93,14 +91,15 @@ $s="select * from donarregistration where email='" . $_SESSION["email"] . "'";
     $data=mysqli_fetch_array($result);
 	//echo $r;
 	
-   echo @$data[9];
+     echo @$data[9];
     
 			mysqli_close($cn);
 			?>
 
 </font>
 </center>
-
+<br>
+    <h1 align="center"><a href="redeem.php"><font size="+2">Redeem</font></a></h1>
 </table>
 </form>
         </div>

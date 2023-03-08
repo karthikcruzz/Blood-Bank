@@ -69,6 +69,9 @@ if($_SESSION['loginstatus']=="")
   
         <tr><td class="lefttd"  style="vertical-align:middle">Id</td><td><input type="number" name="i1"  required="required" pattern="[0-9]{1,10000}" title="Enter id of the donor" /></td></tr>
         <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td class="lefttd"  style="vertical-align:middle">Email</td><td><input type="email" name="e1"  required="required" title="Enter email id of the donor" /></td></tr>
+        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+        
         <tr><td class="lefttd">Select camp </td><td><select name="s3" required><option value="">Select</option>
 <?php
 $cn=makeconnection();
@@ -185,16 +188,16 @@ if(isset($_POST["sbmt"]))
 	$d=$_POST["year"]."-".$_POST["month"]."-".$_POST["day"];
 	//echo $d;
 $cn=makeconnection();
-			$s="insert into donation(donation_id,camp_id,ddate,units,detail) values('".$_POST["i1"]."','" . $_POST["s3"] . "','". $d ."' ,'" . $_POST["t3"] . "','" . $_POST["t4"] . "')";
+	$s="insert into donation(donation_id,camp_id,ddate,units,detail,email) values('".$_POST["i1"]."','" . $_POST["s3"] . "','". $d ."' ,'" . $_POST["t3"] . "','" . $_POST["t4"] . "','".$_POST["e1"]."')";
 			
+	mysqli_query($cn,$s);
+    $s="update donarregistration set points=points+100 where donar_id='" .$_POST["i1"] ."'";
+    
 	mysqli_query($cn,$s);
 	mysqli_close($cn);
 	echo "<script>alert('Record Save');</script>";
 }
-		
-
 	
-
 ?> 	 
 </center>
 
