@@ -88,6 +88,7 @@
 <tr><td class="lefttd"><a href="viewbloodgroup.php">View Blood Group</a></td></tr>
 <tr><td class="lefttd"><a href="viewcamp.php">View camps</a></td></tr>
 
+<tr><td class="lefttd"><a href="addpoints.php">Add points</a></td></tr>
 </table></div></div>
 
 </body>
