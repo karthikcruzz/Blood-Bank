@@ -106,7 +106,7 @@ $s="select * from donarregistration,bloodgroup where donarregistration.b_id='". 
                  <tr><td><span class="title">Gender</span></td><td><?php echo $data[2]; ?></td></tr>
                   <tr><td style="width:24px"><span class="title">Mobile No:</span></td><td><?php echo $data[4]; ?></td></tr>
                   <tr><td><span class="title">Email</span></td><td><?php echo $data[6]; ?></td></tr>
-                   <tr><td><span class="title">Blood Group</span></td><td><?php echo $data[10]; ?></td></tr>
+                   <tr><td><span class="title">Blood Group</span></td><td><?php echo $data[11]; ?></td></tr>
 
                      <tr><td colspan="2">&nbsp;</td></tr>
                      

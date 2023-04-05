@@ -78,11 +78,11 @@ if($_SESSION['donorstatus']=="")
                 <tr><td><img src="Images/chpass.png" width="150px" height="150px" align="right"/></td>
                     <td style="vertical-align:top"><table cellpadding="0" cellspacing="0">
    
-        <tr><td class="lefttd"  style="vertical-align:middle"> Old Password </td><td><input type="password" name="t2"  required="required" pattern="[a-zA-Z0-9]{2,10}" title="please enter only character or numbers between 2 to 10 for password" /></td></tr>
+        <tr><td class="lefttd"  style="vertical-align:middle"> Old Password </td><td><input type="password" name="t2"  required="required" pattern="[0-9]{2,10}" title="please enter only numbers between 2 to 10 length" /></td></tr>
          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td class="lefttd"  style="vertical-align:middle"> New Password:</td><td><input type="password" name="t3"  required="required" pattern="[a-zA-Z0-9]{2,10}" title="please enter only character or numbers between 2 to 10 for new password" /></td></tr>
+        <tr><td class="lefttd"  style="vertical-align:middle"> New Password:</td><td><input type="password" name="t3"  required="required" pattern="[0-9]{2,10}" title="please enter only numbers between 2 to 10 length" /></td></tr>
          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td class="lefttd"  style="vertical-align:middle"> Comfirm Password</td><td><input type="password"  required="required" pattern="[a-zA-Z0-9]{2,10}" title="please enter only character or numbers between 2 to 10 for confirm password" name="t4"/></td></tr>
+        <tr><td class="lefttd"  style="vertical-align:middle"> Comfirm Password</td><td><input type="password"  required="required" pattern="[0-9]{2,10}" title="please enter only numbers between 2 to 10 length" name="t4"/></td></tr>
          <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 		<tr><td>&nbsp;</td><td><input type="submit" value="Change" name="sbmt" style="border:0px; background:linear-gradient(#900,#D50000); width:100px; height:30px; border-radius:10px 1px 10px 1px; box-shadow:1px 1px 5px black; color:white; font-weight:bold; font-size:14px; text-shadow:1px 1px 6px black; "></td></tr>	
 		</table></td></tr></table>	
